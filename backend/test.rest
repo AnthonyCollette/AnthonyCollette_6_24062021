@@ -1,0 +1,23 @@
+GET http://localhost:3000/
+###
+
+POST http://localhost:3000/api/auth/signup
+Content-Type: application/json
+
+{
+    "email": "monadressemail2@gmail.com",
+    "password": "admin"
+}
+###
+
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+    "email": "monadressemail2@gmail.com",
+    "password": "admin"
+}
+###
+
+GET http://localhost:3000/api/sauces
+###
