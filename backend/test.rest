@@ -20,4 +20,21 @@ Content-Type: application/json
 ###
 
 GET http://localhost:3000/api/sauces
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGQ1ZDAzZDk2M2EwNDQ1MWMyNGFjZDciLCJpYXQiOjE2MjU3NDAzNTcsImV4cCI6MTYyNTgyNjc1N30.8AXKoQF7Z5maMGHRIvIocBgeew2t36C1vIp9WAqCOd4
 ###
+
+DELETE http://localhost:3000/api/sauces/60df2368e8901b65c0eb13c0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGQ1ZWE1MjI5NGM2MzNiZTQ2MzY1YzQiLCJpYXQiOjE2MjUyMzYxMzQsImV4cCI6MTYyNTMyMjUzNH0.mgFJ_6tNMfWKHAkvSv3FmhD93n0vYjquofaJydvcGu4
+###
+
+PUT http://localhost:3000/api/sauces/60df2368e8901b65c0eb13c0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGQ1ZWE1MjI5NGM2MzNiZTQ2MzY1YzQiLCJpYXQiOjE2MjUyMzYxMzQsImV4cCI6MTYyNTMyMjUzNH0.mgFJ_6tNMfWKHAkvSv3FmhD93n0vYjquofaJydvcGu4
+Content-Type: application/json
+
+{
+    "name": "Sauce modifiée",
+    "userId": "60d5ea52294c633be46365c4"
+}
+###
+GET http://localhost:3000/api/sauces/60e6cff7ce8936472cbcd4b4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGQ1ZDAzZDk2M2EwNDQ1MWMyNGFjZDciLCJpYXQiOjE2MjU3NDAzNTcsImV4cCI6MTYyNTgyNjc1N30.8AXKoQF7Z5maMGHRIvIocBgeew2t36C1vIp9WAqCOd4

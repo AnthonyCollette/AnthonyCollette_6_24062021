@@ -3,10 +3,15 @@ const fs = require("fs");
 
 exports.createSauce = (req, res, next) => {
     const sauceObject = JSON.parse(req.body.sauce);
-    delete req.sauceObject._id;
+    delete sauceObject._id;
+    console.log(req.procotol);
     const sauce = new Sauce({
         ...sauceObject,
-        imageUrl: `${req.procotol}://${req.get("host")}/images/${req.file.filename}`,
+        imageUrl: `${req.protocol}://${req.get("host")}/images/${req.file.filename}`,
+        likes: 0,
+        dislikes: 0,
+        usersLiked: [],
+        usersDisliked: [],
     });
     sauce
         .save()
@@ -18,7 +23,7 @@ exports.modifySauce = (req, res, next) => {
     const sauceObject = req.file
         ? {
               ...JSON.parse(req.body.sauce),
-              imageUrl: `${req.procotol}://${req.get("host")}/images/${req.file.filename}`,
+              imageUrl: `${req.protocol}://${req.get("host")}/images/${req.file.filename}`,
           }
         : { ...req.body };
     Sauce.updateOne({ _id: req.params.id }, { ...sauceObject, _id: req.params.id })
